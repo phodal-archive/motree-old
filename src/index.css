@@ -44,24 +44,20 @@ body {
 .svgResultStatus.no-background .rect-bg {
   opacity: 0;
 }
-.svgResultStatus rect.success {
+.svgResultStatus rect.learned {
   stroke: none;
   fill: #8CC04F;
 }
-.svgResultStatus rect.aborted,
-.svgResultStatus rect.failure {
+.svgResultStatus rect.ignored,
+.svgResultStatus rect.ignored {
   stroke: none;
   fill: #D54C53;
 }
-.svgResultStatus rect.unstable {
+.svgResultStatus rect.learning {
   stroke: none;
   fill: #F6B44B;
 }
-.svgResultStatus rect.not_built {
-  stroke: none;
-  fill: #949393;
-}
-.svgResultStatus rect.unknown {
+.svgResultStatus rect.questions {
   stroke: none;
   fill: #D54CC4;
 }

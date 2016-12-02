@@ -1,18 +1,13 @@
 // @flow
 
 import React, {Component, PropTypes} from 'react';
-import SvgSpinner from './SvgSpinner';
 import SvgStatus from './SvgStatus';
 
 const validResultValues = {
-    success: 'success',
-    failure: 'failure',
-    running: 'running',
-    queued: 'queued',
-    unstable: 'unstable',
-    aborted: 'aborted',
-    not_built: 'not_built',
-    unknown: 'unknown'
+    learned: 'learned',
+    ignored: 'ignored',
+    questions: 'questions',
+    running: 'running'
 };
 
 // Enum type from const validResultValues
@@ -31,23 +26,7 @@ export function decodeResultValue(resultMaybe: any):Result {
 
 // Returns the correct <g> element for the result / progress percent
 export function getGroupForResult(result: Result, percentage: number, radius: number) {
-    if (usesSvgSpinner(result)) {
-        return <SvgSpinner radius={radius} result={result} percentage={percentage}/>;
-    } else {
-        return <SvgStatus radius={radius} result={result}/>;
-    }
-}
-
-// indicates whether result should use the Spinner (or Status)
-function usesSvgSpinner(result: Result) {
-    switch (result) {
-        case 'running':
-        case 'queued':
-        case 'not_built':
-            return true;
-        default:
-            return false;
-    }
+    return <SvgStatus radius={radius} result={result}/>;
 }
 
 class StatusIndicator extends Component {
@@ -74,8 +53,7 @@ class StatusIndicator extends Component {
 
         const translate = `translate(${radius} ${radius})`;
         // SvgStatus needs to be scaled up to fill the available space when no bg is used
-        const scale = noBackground && !usesSvgSpinner(resultClean) ?
-            'scale(2,2)' : null;
+        const scale = noBackground ? 'scale(2,2)' : null;
 
         const transforms = [
             translate,
@@ -105,4 +83,4 @@ StatusIndicator.propTypes = {
 
 StatusIndicator.validResultValues = validResultValues;
 
-export {StatusIndicator, SvgSpinner, SvgStatus};
+export {StatusIndicator, SvgStatus};

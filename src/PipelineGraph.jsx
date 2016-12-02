@@ -2,7 +2,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import {getGroupForResult, decodeResultValue} from './status/StatusIndicator';
-import {strokeWidth as nodeStrokeWidth} from './status/SvgSpinner';
+export const nodeStrokeWidth = 3.5;
 
 import type {Result} from './status/StatusIndicator';
 

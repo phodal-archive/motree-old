@@ -4,7 +4,7 @@ import React, { Component, PropTypes } from 'react';
 
 import type { Result } from './StatusIndicator';
 
-import {strokeWidth} from './SvgSpinner';
+export const strokeWidth = 3.5;
 import {describeArcAsPath} from '../SVG';
 
 // These were mostly taken from SVG and pre-translated
@@ -33,32 +33,25 @@ export function getGlyphFor(result:Result) {
     // generate a "scale" transform for the group
 
     switch (result) {
-        case "aborted":
-            return (
-                <g className="result-status-glyph">
-                    <polygon points="-5 -1 5 -1 5 1 -5 1"/>
-                </g>
-            );
-        case "unstable":
-            // "!"
-            return (
-                <g className="result-status-glyph">
-                    <polygon points="-1 -5 1 -5 1 1 -1 1"/>
-                    <polygon points="-1 3 1 3 1 5 -1 5"/>
-                </g>
-            );
-        case "success":
+        case "learned":
             // check-mark
             return (
                 <g className="result-status-glyph">
                     <polygon points={checkMarkPoints}/>
                 </g>
             );
-        case "failure":
+        case "ignored":
             // "X"
             return (
                 <g className="result-status-glyph">
                     <polygon points={crossPoints}/>
+                </g>
+            );
+        case "questions":
+            // "X"
+            return (
+                <g className="result-status-glyph">
+                    <polygon points={hollowCirclePath}/>
                 </g>
             );
         case "running":
@@ -74,14 +67,6 @@ export function getGlyphFor(result:Result) {
                         stroke="white"
                         className="spin" fill="none" strokeWidth={strokeWidth}
                           d={d}/>
-                </g>
-            );
-        case "not_built":
-        case "queued":
-            // hollow circle
-            return (
-                <g className="result-status-glyph">
-                    <path transform="scale(0.9)" d={hollowCirclePath}/>
                 </g>
             );
         default:

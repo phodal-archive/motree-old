@@ -12,19 +12,19 @@ class App extends Component {
         var graphNodes = [{
             "name": "HTML",
             "children": [],
-            "state": "success",
+            "state": "learned",
             "completePercent": 100,
             "id": "6"
         }, {
             "name": "JS",
             "children": [],
-            "state": "success",
+            "state": "learned",
             "completePercent": 100,
             "id": "11"
         }, {
             "name": "CSS",
             "children": [],
-            "state": "success",
+            "state": "learned",
             "completePercent": 100,
             "id": "16"
         }, {
@@ -33,24 +33,30 @@ class App extends Component {
                 {
                     "name": "React",
                     "children": [],
-                    "state": "success",
+                    "state": "learned",
                     "completePercent": 100,
                     "id": "21"
                 }, {
                     "name": "Angular.js",
                     "children": [],
-                    "state": "success",
+                    "state": "learning",
                     "completePercent": 100,
                     "id": "26"
                 }, {
-                    "name": "Backbone",
+                    "name": "ignored",
                     "children": [],
-                    "state": "success",
+                    "state": "ignored",
                     "completePercent": 100,
                     "id": "27"
+                }, {
+                    "name": "questions",
+                    "children": [],
+                    "state": "questions",
+                    "completePercent": 100,
+                    "id": "28"
                 }
             ],
-            "state": "success",
+            "state": "learned",
             "completePercent": 100,
             "id": "17"
         }, {
@@ -68,7 +74,7 @@ class App extends Component {
         }, {
             "name": "AC",
             "children": [],
-            "state": "success",
+            "state": "learned",
             "completePercent": 100,
             "id": "43"
         }];
