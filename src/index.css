@@ -1,5 +1,61 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "LatoLatinWeb", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.graph-tree {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pipeline-connector {
+  stroke: #949393;
+}
+
+.pipeline-big-label {
+}
+
+.pipeline-small-label {
+  font-size: 80%;
+}
+
+.pipeline-big-label.selected,
+.pipeline-small-label.selected {
+  font-weight:bold;
+}
+
+.pipeline-selection-highlight circle {
+  fill: none;
+  stroke: #949393;
+}
+
+.result-status-glyph {
+  stroke: none;
+  fill: #fff;
+}
+.svgResultStatus.no-background .circle-bg {
+  opacity: 0;
+}
+.svgResultStatus circle.success {
+  stroke: none;
+  fill: #8CC04F;
+}
+.svgResultStatus circle.aborted,
+.svgResultStatus circle.failure {
+  stroke: none;
+  fill: #D54C53;
+}
+.svgResultStatus circle.unstable {
+  stroke: none;
+  fill: #F6B44B;
+}
+.svgResultStatus circle.not_built {
+  stroke: none;
+  fill: #949393;
+}
+.svgResultStatus circle.unknown {
+  stroke: none;
+  fill: #D54CC4;
 }
