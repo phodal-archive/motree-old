@@ -39,8 +39,29 @@ export default class SvgSpinner extends Component {
 
         return (
             <g className={groupClasses.join(' ')}>
-                <circle cx="0" cy="0" r={radius} strokeWidth={strokeWidth}/>
-                <circle className="inner" cx="0" cy="0" r={innerRadius} />
+                <rect x={-radius} y={-radius} width={radius * 2} height={radius * 2} strokeWidth={strokeWidth}/>
+                <rect className="inner" x={-innerRadius} y={-innerRadius} width={innerRadius * 2}
+                      height={innerRadius * 2} stroke="#fff">
+                    <animateTransform
+                        attributeType="xml"
+                        attributeName="transform"
+                        type="scale"
+                        from="0"
+                        by="3"
+                        dur="4s"
+                        fill="freeze"
+                        repeatCount="indefinite"
+                    />
+                    <animate
+                        attributeType="xml"
+                        attributeName="fill-opacity"
+                        from="0"
+                        to="0"
+                        values="0;0.5;0"
+                        dur="4s"
+                        repeatCount="indefinite"
+                        fill="freeze" />
+                </rect>
                 { percentage ? <path className={result} fill="none" strokeWidth={strokeWidth} d={d}/> : null}
             </g>
         );

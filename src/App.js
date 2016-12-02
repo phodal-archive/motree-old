@@ -62,8 +62,8 @@ class App extends Component {
         }, {
             "name": "Deploy",
             "children": [],
-            "state": "success",
-            "completePercent": 100,
+            "state": "running",
+            "completePercent": 30,
             "id": "37"
         }, {
             "name": "AC",
