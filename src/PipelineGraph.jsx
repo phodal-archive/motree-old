@@ -366,12 +366,16 @@ export class PipelineGraph extends Component {
         // Add an invisible click/touch target, coz the nodes are small and (more importantly)
         // many are hollow.
         groupChildren.push(
-            <circle r={mouseTargetRadius}   
-                    cursor="pointer"
-                    className="pipeline-node-hittarget"
-                    fillOpacity="0"
-                    stroke="none"
-                    onClick={() => this.nodeClicked(node)}/>
+            <rect
+                x={-mouseTargetRadius}
+                y={-mouseTargetRadius}
+                width={mouseTargetRadius * 2}
+                height={mouseTargetRadius * 2}
+                cursor="pointer"
+                className="pipeline-node-hittarget"
+                fillOpacity="0"
+                stroke="none"
+                onClick={() => this.nodeClicked(node)}/>
         );
 
         // All the nodes are in shared code, so they're rendered at 0,0 so we transform within a <g>
@@ -405,7 +409,7 @@ export class PipelineGraph extends Component {
 
         return (
             <g className="pipeline-selection-highlight" transform={transform}>
-                <circle r={highlightRadius} strokeWidth={connectorStrokeWidth * 1.1}/>
+                <rect x={-highlightRadius} y={-highlightRadius} width={highlightRadius * 2} height={highlightRadius * 2} rx="2" ry="2" strokeWidth={connectorStrokeWidth * 1.1}/>
             </g>
         );
     }

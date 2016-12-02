@@ -26,7 +26,7 @@ body {
   font-weight:bold;
 }
 
-.pipeline-selection-highlight circle {
+.pipeline-selection-highlight rect {
   fill: none;
   stroke: #949393;
 }
@@ -35,27 +35,27 @@ body {
   stroke: none;
   fill: #fff;
 }
-.svgResultStatus.no-background .circle-bg {
+.svgResultStatus.no-background .rect-bg {
   opacity: 0;
 }
-.svgResultStatus circle.success {
+.svgResultStatus rect.success {
   stroke: none;
   fill: #8CC04F;
 }
-.svgResultStatus circle.aborted,
-.svgResultStatus circle.failure {
+.svgResultStatus rect.aborted,
+.svgResultStatus rect.failure {
   stroke: none;
   fill: #D54C53;
 }
-.svgResultStatus circle.unstable {
+.svgResultStatus rect.unstable {
   stroke: none;
   fill: #F6B44B;
 }
-.svgResultStatus circle.not_built {
+.svgResultStatus rect.not_built {
   stroke: none;
   fill: #949393;
 }
-.svgResultStatus circle.unknown {
+.svgResultStatus rect.unknown {
   stroke: none;
   fill: #D54CC4;
 }

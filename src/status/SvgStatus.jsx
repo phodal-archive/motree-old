@@ -100,7 +100,8 @@ export default class SvgStatus extends Component {
 
         return (
             <g className="svgResultStatus">
-                <circle cx="0" cy="0" r={radius} className={`circle-bg ${result}`}/>
+                <rect x="-12" y="-12" width={radius * 2} height={radius * 2}
+                      rx="2" ry="2" className={`rect-bg ${result}`}/>
                 {getGlyphFor(result)}
             </g>
         );

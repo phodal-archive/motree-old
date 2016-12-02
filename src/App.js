@@ -10,40 +10,40 @@ class App extends Component {
 
     render() {
         var graphNodes = [{
-            "name": "Checkout",
+            "name": "HTML",
             "children": [],
             "state": "success",
             "completePercent": 100,
             "id": "6"
         }, {
-            "name": "Create Virtualenv",
+            "name": "JS",
             "children": [],
             "state": "success",
             "completePercent": 100,
             "id": "11"
         }, {
-            "name": "Install",
+            "name": "CSS",
             "children": [],
             "state": "success",
             "completePercent": 100,
             "id": "16"
         }, {
-            "name": "Test",
+            "name": "JavaScript",
             "children": [
                 {
-                    "name": "Unit Test",
+                    "name": "React",
                     "children": [],
                     "state": "success",
                     "completePercent": 100,
                     "id": "21"
                 }, {
-                    "name": "E2E Test",
+                    "name": "Angular.js",
                     "children": [],
                     "state": "success",
                     "completePercent": 100,
                     "id": "26"
                 }, {
-                    "name": "E2E Test",
+                    "name": "Backbone",
                     "children": [],
                     "state": "success",
                     "completePercent": 100,
@@ -54,12 +54,18 @@ class App extends Component {
             "completePercent": 100,
             "id": "17"
         }, {
-            "name": "Release",
+            "name": "MVC",
+            "children": [],
+            "state": "failure",
+            "completePercent": 100,
+            "id": "31"
+        }, {
+            "name": "Deploy",
             "children": [],
             "state": "success",
             "completePercent": 100,
-            "id": "31"
-        }, {"name": "Deploy", "children": [], "state": "success", "completePercent": 100, "id": "37"}, {
+            "id": "37"
+        }, {
             "name": "AC",
             "children": [],
             "state": "success",
