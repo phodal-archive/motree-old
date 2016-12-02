@@ -77,8 +77,10 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>MoTree</h2>
+                    <div className="logo">
+                        <img src={logo} className="App-logo" alt="logo"/>
+                        <h2>MoTree</h2>
+                    </div>
                 </div>
                 <div className="graph-tree">
                     <PipelineGraph
