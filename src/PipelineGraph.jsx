@@ -179,6 +179,9 @@ export class PipelineGraph extends Component {
                 if(nodeStages.length%2 === 0) {
                     yp = -(nodeStages.length / 2) * 20 + 105;
                 }
+                if(nodeStages.length === 2) {
+                    yp = ypStart + 85;
+                }
             }
 
             for (const nodeStage of nodeStages) {

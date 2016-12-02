@@ -67,7 +67,19 @@ class App extends Component {
             "id": "31"
         }, {
             "name": "Deploy",
-            "children": [],
+            "children": [{
+                "name": "Angular.js",
+                "children": [],
+                "state": "learning",
+                "completePercent": 100,
+                "id": "32"
+            }, {
+                "name": "ignored",
+                "children": [],
+                "state": "ignored",
+                "completePercent": 100,
+                "id": "33"
+            }],
             "state": "running",
             "completePercent": 30,
             "id": "37"
