@@ -42,11 +42,17 @@ class App extends Component {
                     "state": "success",
                     "completePercent": 100,
                     "id": "26"
+                }, {
+                    "name": "E2E Test",
+                    "children": [],
+                    "state": "success",
+                    "completePercent": 100,
+                    "id": "27"
                 }
             ],
             "state": "success",
             "completePercent": 100,
-            "id": "16"
+            "id": "17"
         }, {
             "name": "Release",
             "children": [],
@@ -60,12 +66,13 @@ class App extends Component {
             "completePercent": 100,
             "id": "43"
         }];
+
         var selectedStage = [{}];
         return (
             <div className="App">
                 <div className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>Welcome to React</h2>
+                    <h2>MoTree</h2>
                 </div>
                 <div className="graph-tree">
                     <PipelineGraph
