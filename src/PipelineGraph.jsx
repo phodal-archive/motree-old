@@ -459,7 +459,7 @@ export class PipelineGraph extends Component {
         // These are about layout more than appearance, so they should probably remain inline
         const outerDivStyle = {
             position: "relative", // So we can put the labels where we need them
-            overflow: "visible" // So long labels can escape this component in layout
+            overflow: "scroll" // So long labels can escape this component in layout
         };
 
         return (
