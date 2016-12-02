@@ -336,7 +336,7 @@ export class PipelineGraph extends Component {
         // Otherwise, we'd like a curve
 
         const verticalDirection = Math.sign(rightPos.y - leftPos.y); // 1 == curve down, -1 == curve up
-        const midPointX = Math.round((leftPos.x + rightPos.x) / 2 + (curveRadius * verticalDirection));
+        const midPointX = Math.round((leftPos.x + rightPos.x) / 2);
         const w1 = midPointX - curveRadius - leftPos.x;
         const w2 = rightPos.x - curveRadius - midPointX;
         const v = rightPos.y - leftPos.y - (2 * curveRadius * verticalDirection); // Will be -ive if curve up
