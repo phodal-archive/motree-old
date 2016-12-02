@@ -158,7 +158,7 @@ export class PipelineGraph extends Component {
         // For reach top-level stage we have a column of node(s)
         for (const topStage of newStages) {
 
-            yp = ypStart  + 50;
+            yp = ypStart  + 120;
 
             // Always have a single bigLabel per top-level stage
             bigLabels.push({
@@ -175,7 +175,10 @@ export class PipelineGraph extends Component {
             const columnNodes: Array<NodeInfo> = [];
 
             if(nodeStages.length > 1) {
-                yp = -(nodeStages.length / 2) * 20 + 60
+                yp = -(nodeStages.length / 2) * 20 + 60;
+                if(nodeStages.length%2 === 0) {
+                    yp = -(nodeStages.length / 2) * 20 + 105;
+                }
             }
 
             for (const nodeStage of nodeStages) {
