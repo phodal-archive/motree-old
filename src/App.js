@@ -61,7 +61,19 @@ class App extends Component {
             "id": "17"
         }, {
             "name": "MVC",
-            "children": [],
+            "children": [{
+              "name": "ignored",
+              "children": [],
+              "state": "ignored",
+              "completePercent": 100,
+              "id": "50"
+            }, {
+              "name": "questions",
+              "children": [],
+              "state": "questions",
+              "completePercent": 100,
+              "id": "51"
+            }],
             "state": "failure",
             "completePercent": 100,
             "id": "31"
