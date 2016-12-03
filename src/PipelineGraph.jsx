@@ -2,9 +2,9 @@
 
 import React, { Component, PropTypes } from 'react';
 import {getGroupForResult, decodeResultValue} from './status/StatusIndicator';
-export const nodeStrokeWidth = 3.5;
-
 import type {Result} from './status/StatusIndicator';
+
+export const nodeStrokeWidth = 3.5;
 
 // Dimensions used for layout, px
 export const defaultLayout = {
